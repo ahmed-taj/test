@@ -22,7 +22,7 @@ install:
  - cd src/backend
 
 script:
- - tox -e $TOX_ENV
+ - tox
 
 notifications:
   email: false
