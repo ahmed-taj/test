@@ -22,11 +22,9 @@ before_script:
   - docker-compose up -d
 
 script:
-  - docker-compose run web py.test --cov
+  - echo $PATH
+  - py.test --cov
 
-after_success:
-  - docker-compose up -d
-  - docker-compose run web codecov
 
 notifications:
   email: false
