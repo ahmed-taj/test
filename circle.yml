@@ -17,3 +17,5 @@ test:
     - docker-compose up -d
   override:
     - docker-compose run web pytest --cov
+  post:
+    - docker-compose run web bash <(curl -s https://codecov.io/bash)
