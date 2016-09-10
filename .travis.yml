@@ -15,16 +15,9 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
 
-# command to install dependencies
-install:
-  - docker-compose build
-
-# command to run tests
-before_script:
-  - docker-compose start
-
 script:
-  - echo $PATH
+  - docker-compose build
+  - docker-compose up -d
   - docker-compose run web py.test --cov
 
 
