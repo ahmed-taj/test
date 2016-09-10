@@ -23,7 +23,6 @@ services:
     depends_on:
       - db
     environment:
-      - POSTGRES_USER=humans
       - USE_DOCKER=yes
     volumes:
       - ./src/backend:/app
