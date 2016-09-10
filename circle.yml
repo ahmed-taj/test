@@ -1,0 +1,14 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - sudo pip install -U docker-compose==1.8.0
+
+test:
+  pre:
+    - docker-compose build
+    - docker-compose up -d
+  override:
+    - docker-compose run web pytest --cov
