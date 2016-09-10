@@ -44,6 +44,3 @@ django_coverage_plugin
 
 # Test data
 factory_boy>=2.7.0
-
-# Travis CI
-codecov
