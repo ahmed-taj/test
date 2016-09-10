@@ -17,6 +17,3 @@ test:
     - docker-compose up -d
   override:
     - docker-compose run web pytest --cov
-  post:
-    - docker-compose run web pip install codecov
-    - docker-compose run web codecov --root src/backend

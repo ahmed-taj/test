@@ -24,5 +24,10 @@ install:
 script:
  - tox
 
+after_success:
+  - pip install codecov
+  - codecov -e py35-django18-drf34
+
+
 notifications:
   email: false
