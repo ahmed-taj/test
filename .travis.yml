@@ -1,27 +1,26 @@
-sudo: required
-
 language: python
 
 env:
-  DOCKER_COMPOSE_VERSION: 1.8.0
+  - TOXENV=py35-django110-drf34
+  - TOXENV=py34-django110-drf34
+  - TOXENV=py34-django19-drf33
+  - TOXENV=py35-django18-drf33
+  - TOXENV=py35-django18-drf32
+  - TOXENV=py35-django18-drf34
+  - TOXENV=py35-django18-drf31
+  - TOXENV=py35-django19-drf33
+  - TOXENV=py35-django19-drf34
+  - TOXENV=py34-django18-drf34
+  - TOXENV=py34-django19-drf34
+  - TOXENV=py34-django18-drf32
+  - TOXENV=py34-django18-drf33
+  - TOXENV=py34-django18-drf31
 
-services:
-  - docker
-
-before_install:
-  - docker --version
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
+install:
+ - pip install tox
 
 script:
-  - docker-compose build
-  - docker-compose up -d
-  - docker-compose ps
-  - docker-compose run web echo $DATABASE_URL
-  - docker-compose run web py.test --cov
-
+ - tox -e $TOX_ENV
 
 notifications:
   email: false
