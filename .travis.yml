@@ -1,5 +1,7 @@
 sudo: required
 
+language: python
+
 env:
   DOCKER_COMPOSE_VERSION: 1.8.0
 
@@ -19,11 +21,11 @@ install:
 
 # command to run tests
 before_script:
-  - docker-compose up -d
+  - docker-compose start
 
 script:
   - echo $PATH
-  - py.test --cov
+  - docker-compose run web py.test --cov
 
 
 notifications:
