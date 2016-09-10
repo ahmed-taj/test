@@ -12,8 +12,6 @@ services:
       - postgres_backup_dev:/backups
     environment:
       - POSTGRES_USER=humans
-    ports:
-      - "5431:5432"
 
   web:
     build:
@@ -23,6 +21,7 @@ services:
     depends_on:
       - db
     environment:
+      - POSTGRES_USER=humans
       - USE_DOCKER=yes
     volumes:
       - ./src/backend:/app
