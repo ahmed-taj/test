@@ -1,0 +1,49 @@
+# Used for Tox only
+# Should be the same as base.txt without Django, and DRF
+
+django-filter>=0.14.0
+
+djangorestframework-jsonapi >= 2.1.0
+
+# OAuth2
+django-oauth-toolkit >= 0.10.0
+
+# Social auth
+python-social-auth >= 0.2.21
+
+# Python-PostgreSQL Database Adapter
+psycopg2 >= 2.6.2
+
+# Configurations & 12factor env
+dj-database-url
+django-environ
+django-configurations >= 2.0
+
+# Debugging
+django-debug-toolbar
+
+# Static analyzers
+flake8
+pylint
+pylint-common
+pylint-django
+#pylint-celery
+
+# Auto formater
+autopep8
+
+# Pytest
+pytest-cov
+pytest
+pytest-django
+pytest-sugar
+
+# Coverage
+coverage
+django_coverage_plugin
+
+# Test data
+factory_boy>=2.7.0
+
+# Travis CI
+codecov

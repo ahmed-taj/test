@@ -1,0 +1,15 @@
+FROM python:3.5
+
+ENV PYTHONUNBUFFERED 1
+
+# Requirements have to be pulled and installed here, otherwise caching won't work
+COPY ./src/backend/deps /deps
+RUN pip install -r /deps/dev.txt
+
+COPY ./.docker/web/entrypoint.sh /entrypoint.sh
+RUN sed -i 's/\r//' /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+WORKDIR /app
+
+ENTRYPOINT ["/entrypoint.sh"]

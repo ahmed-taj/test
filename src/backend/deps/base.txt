@@ -1,0 +1,25 @@
+# Essential dependencies go here
+
+# Django LTS
+django==1.8.*
+
+
+# Django REST Framework
+djangorestframework>=3.4.4
+django-filter>=0.14.0
+
+djangorestframework-jsonapi >= 2.1.0
+
+# OAuth2
+django-oauth-toolkit >= 0.10.0
+
+# Social auth
+python-social-auth >= 0.2.21
+
+# Python-PostgreSQL Database Adapter
+psycopg2 >= 2.6.2
+
+# Configurations & 12factor env
+dj-database-url
+django-environ
+django-configurations >= 2.0

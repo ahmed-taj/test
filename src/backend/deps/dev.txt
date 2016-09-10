@@ -1,0 +1,31 @@
+# Local development related dependencies
+-r base.txt
+
+# Debugging
+django-debug-toolbar
+
+# Static analyzers
+flake8
+pylint
+pylint-common
+pylint-django
+#pylint-celery
+
+# Auto formater
+autopep8
+
+# Pytest
+pytest-cov
+pytest
+pytest-django
+pytest-sugar
+
+# Coverage
+coverage
+django_coverage_plugin
+
+# Test data
+factory_boy>=2.7.0
+
+# Travis CI
+codecov

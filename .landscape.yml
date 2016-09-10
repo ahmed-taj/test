@@ -1,0 +1,17 @@
+doc-warnings: no
+test-warnings: no
+strictness: medium
+max-line-length: 80
+uses:
+    - django
+autodetect: yes
+requirements:
+    - src/backend/deps/base.txt
+    - src/backend/deps/dev.txt
+ignore-paths:
+    - src/backend/conf
+    - src/backend/docs
+ignore-patterns:
+    - (^|/)tests(/|$)
+python-targets:
+    - 3
