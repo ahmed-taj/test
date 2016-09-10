@@ -1,20 +1,33 @@
+sudo: false
 language: python
 
 env:
-  - TOXENV=py35-django110-drf34
-  - TOXENV=py34-django110-drf34
-  - TOXENV=py34-django19-drf33
-  - TOXENV=py35-django18-drf33
-  - TOXENV=py35-django18-drf32
-  - TOXENV=py35-django18-drf34
-  - TOXENV=py35-django18-drf31
-  - TOXENV=py35-django19-drf33
-  - TOXENV=py35-django19-drf34
-  - TOXENV=py34-django18-drf34
-  - TOXENV=py34-django19-drf34
-  - TOXENV=py34-django18-drf32
-  - TOXENV=py34-django18-drf33
-  - TOXENV=py34-django18-drf31
+  - DATABASE_URL=postgres://postgres@localhost/humans
+
+services:
+  - postgresql
+
+addons:
+  postgresql: "9.4"
+
+before_script:
+  - psql -c 'create database humans;' -U postgres
+
+env:
+  - TOX_ENV=py35-django110-drf34
+  - TOX_ENV=py34-django110-drf34
+  - TOX_ENV=py34-django19-drf33
+  - TOX_ENV=py35-django18-drf33
+  - TOX_ENV=py35-django18-drf32
+  - TOX_ENV=py35-django18-drf34
+  - TOX_ENV=py35-django18-drf31
+  - TOX_ENV=py35-django19-drf33
+  - TOX_ENV=py35-django19-drf34
+  - TOX_ENV=py34-django18-drf34
+  - TOX_ENV=py34-django19-drf34
+  - TOX_ENV=py34-django18-drf32
+  - TOX_ENV=py34-django18-drf33
+  - TOX_ENV=py34-django18-drf31
 
 install:
  - pip install tox
