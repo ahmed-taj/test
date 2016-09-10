@@ -19,6 +19,7 @@ script:
   - docker-compose build
   - docker-compose up -d
   - docker-compose ps
+  - docker-compose run web echo $DATABASE_URL
   - docker-compose run web py.test --cov
 
 
