@@ -1,9 +1,11 @@
 machine:
+  python:
+    version: 3.5.1
   services:
     - docker
 
 dependencies:
-  override:
+  pre:
     - sudo pip install -U docker-compose==1.8.0
 
 test:
