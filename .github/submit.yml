@@ -6,20 +6,10 @@ form:
   # Parentheses **Required**, but, will be stripped.
   Description: ( Provide help text )
 
-  # Bugs
-
-  What is the current behavior?:
-    for: bug report
-
   Steps to reproduce:
     for: bug report
-
 
 
   What is the expected behavior?:
     for: bug report
 
-  Version:
-    # You can also write help text as key
-    help: You may run "cmd --version" and paste the output here
-    for: bug report
