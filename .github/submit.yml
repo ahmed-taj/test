@@ -6,12 +6,6 @@ form:
   # Parentheses **Required**, but, will be stripped.
   Description: ( Provide help text )
 
-  # Feature requests
-
-  What is the motivation / use case for changing the behavior?:
-    # Limit the visibility of this field to specific issue type
-    for: feature requests
-
   # Bugs
 
   What is the current behavior?:
@@ -20,15 +14,6 @@ form:
   Steps to reproduce:
     for: bug report
 
-  Minimal demo (if possible):
-    # A field may has a description. Description text will be rendered as inline
-    # Markdown
-    # You may also write
-    help: >
-      Use [plnkr](https://plnkr.co) or similar (you can use
-      [this template](http://plnkr.co/edit/tpl:AvJOMERrnz94ekVua0u5) as a
-      starting point).
-    for: bug report
 
 
   What is the expected behavior?:
@@ -38,9 +23,3 @@ form:
     # You can also write help text as key
     help: You may run "cmd --version" and paste the output here
     for: bug report
-
-  # Other
-  Other information: >
-    (e.g. detailed explanation, stacktraces, related issues, suggestions
-    how to fix, links for us to have context, eg. stackoverflow, gitter,
-    et
