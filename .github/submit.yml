@@ -4,7 +4,7 @@ form:
 
   # A field may also has a help text (rendered as HTML placeholder).
   # Parentheses **Required**, but, will be stripped.
-  Description:
+  Description: Write here
   
   Steps to reproduce:
     for: bug report
