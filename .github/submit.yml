@@ -1,3 +1,9 @@
+meta: 
+  types: 
+    - Feature request
+    - Bug report
+  note: a text from maintainers
+
 form:
   # All keys - except "meta" - will be considered as fields. There is only one
   # Type of fields; Text boxes. Text boxes support GFM.
