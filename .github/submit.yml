@@ -5,17 +5,14 @@ meta:
   note: a text from maintainers
 
 form:
-  # All keys - except "meta" - will be considered as fields. There is only one
-  # Type of fields; Text boxes. Text boxes support GFM.
-
-  # A field may also has a help text (rendered as HTML placeholder).
-  # Parentheses **Required**, but, will be stripped.
+  # Key: field name (rendered as label)
+  # Value: a help text (rendered as input placeholder)
   Description: Write here
   
+  # The value can also be an object
   Steps to reproduce:
+    help: help text
     for: bug report
-
 
   What is the expected behavior?:
     for: bug report
-
