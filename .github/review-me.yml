@@ -1,0 +1,5 @@
+when:
+  dep: failure
+  wip: success
+
+label: ready-for-review
