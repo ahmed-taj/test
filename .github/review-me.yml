@@ -1,5 +1,5 @@
 when:
-  ci/circleci: failure
+  ci/circleci: success
   wip: success
 
 label: ready-for-review
