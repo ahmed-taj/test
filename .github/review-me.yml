@@ -1,5 +1,5 @@
 when:
-  dep: failure
+  ci/circleci: failure
   wip: success
 
 label: ready-for-review
