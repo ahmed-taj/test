@@ -8,4 +8,3 @@ when:
   #   - error
   continuous-integration/travis-ci/pr: success
   wip: success
-  dep: failure
