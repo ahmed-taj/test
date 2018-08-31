@@ -1,7 +1,7 @@
 rules: 
   # List of contexts (i.e. apps) and their corresponding statuses
   - when:
-  	# Allowed statuses are:
+    # Allowed statuses are:
     #
     #   - success
     #   - failure
@@ -10,7 +10,7 @@ rules:
     continuous-integration/travis-ci/pr: success
     wip: success
 
-  	# The label to add
+    # The label to add
     label: Review Me
 
     # The labels to remove
